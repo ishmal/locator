@@ -1,0 +1,28 @@
+{
+	"name": "locator",
+	"version": "1.0.0",
+	"description": "Simple library for maidenhead locators",
+	"main": "src/locator.js",
+	"scripts": {
+		"test": "mocha tests/*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ishmal/locator.git"
+	},
+	"keywords": [
+		"ham",
+		"maidenhead",
+		"locator",
+		"maps"
+	],
+	"author": "Bob Jamison, KS5D",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/ishmal/locator/issues"
+	},
+	"homepage": "https://github.com/ishmal/locator#readme",
+	"devDependencies": {
+		"mocha": "^7.1.1"
+	}
+}
