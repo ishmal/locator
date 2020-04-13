@@ -11,4 +11,4 @@ of the Maidenhead box, all in decimal degrees.
 const bounds = convertor.locatorToLatLon("EM10");
 
 
-const locator converter.latLonToLocator()
+const locator converter.latLonToLocator(35.456, -47.123)

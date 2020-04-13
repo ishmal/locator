@@ -7,18 +7,38 @@ describe('Locator', () => {
 
 	const locator = new Locator();
 
-	const eq = (v, lat, lon) => {
-		const xerr = Math.abs(v.cx - lon);
-		assert( xerr < 0.0001 , `x: ${v.cx}, exp:${lon}`)
-		const yerr = Math.abs(v.cy - lat);
-		assert( yerr < 0.0001 , `y: ${v.cy}, exp:${lat}`)
-	};
-
 	describe('locator to lat lon',() => {
 
+		const eq = (v, lat, lon) => {
+			const xerr = Math.abs(v.cx - lon);
+			assert( xerr < 0.0001 , `x: ${v.cx}, exp:${lon}`)
+			const yerr = Math.abs(v.cy - lat);
+			assert( yerr < 0.0001 , `y: ${v.cy}, exp:${lat}`)
+		};
+	
+	
 		it("test1", () => {
 			const v = locator.locatorToLatLon("IO93lo72hn")
 			eq(v, 53.593924, -1.022569);
+		});
+
+		it("test2", () => {
+			const v = locator.locatorToLatLon("EM10ek00")
+			eq(v, 30.416941, -97.663873);
+		});
+
+
+	});
+
+	describe('lat lon to locator', () => {
+
+		const eq = (exp, loc) => {
+				assert(exp === loc, `exp: ${exp} loc: ${loc}`)
+		}
+
+		it("test3", () => {
+			const v = locator.latLonToLocator(30.416941, -97.663873);
+			eq("EM10ek00", v);
 		});
 
 	});

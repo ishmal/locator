@@ -1,7 +1,7 @@
 {
 	"name": "locator",
 	"version": "1.0.0",
-	"description": "Simple library for maidenhead locators",
+	"description": "Simple library for converting between decimal degree coordinates and Maidenhead locators",
 	"main": "src/locator.js",
 	"scripts": {
 		"test": "mocha tests/*.js"
